@@ -35,7 +35,7 @@ class Anunciocard extends StatelessWidget {
               ),
 
               Text(
-                '${carro.quilometragem} - ${carro.ano} - ${carro.cor}',
+                '${carro.quilometragem}km - ${carro.ano} - ${carro.cor}',
                 style: const TextStyle(fontSize: 12, color: Colors.grey),
               ),
 
