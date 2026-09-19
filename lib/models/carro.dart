@@ -24,7 +24,7 @@ class Carro {
     final formatador = NumberFormat.currency(
       locale: 'pt_BR',
       symbol: 'R\$',
-      decimalDigits: 2,
+      decimalDigits: 0,
     );
     return formatador.format(valor);
   }
