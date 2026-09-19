@@ -8,6 +8,55 @@ class Anunciocard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: Image.asset(
+            'assets/images/${carro.imagem}',
+            width: 120,
+            height: 120,
+            fit: BoxFit.cover,
+          ),
+        ),
+        const SizedBox(width: 14),
+
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                carro.nome,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              Text(
+                '${carro.quilometragem} - ${carro.ano} - ${carro.cor}',
+                style: const TextStyle(fontSize: 12, color: Colors.grey),
+              ),
+
+              Text(
+                carro.preco,
+                style: const TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              Text(
+                '${carro.dataAnuncio.day.toString().padLeft(2, '0')}/'
+                '${carro.dataAnuncio.month.toString().padLeft(2, '0')}/'
+                '${carro.dataAnuncio.year} | ${carro.local}',
+                style: const TextStyle(fontSize: 12, color: Colors.grey),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
